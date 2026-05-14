@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shreyanshi Jangid | Portfolio</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Schibsted+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cursor"></div>
+
+  <!-- Loading Screen -->
+  <div id="loader">
+    <div class="loader-content">
+      <svg class="loader-ring" viewBox="0 0 100 100">
+        <circle class="bg" cx="50" cy="50" r="48"></circle>
+        <circle class="progress" cx="50" cy="50" r="48"></circle>
+      </svg>
+      <div class="loader-text">INITIALIZING CORE... <span id="load-percent">0</span>%</div>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Engine -->
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="particles-canvas"></canvas>
+  <div id="bg-overlay"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-inner">
+      <a href="#hero" class="nav-logo">SJ</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#hackathons" class="nav-link">Hackathons</a></li>
+        <li><a href="#adventures" class="nav-link">Adventures</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="ti ti-menu-2"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section id="hero">
+      <div class="container hero-content">
+        <span class="hero-eyebrow">B.Tech CSE · AI & Prompt Engineering</span>
+        <h1 class="hero-headline">
+          <div class="name-first">SHREYANSHI</div>
+          <div class="name-last">JANGID</div>
+        </h1>
+        <p class="hero-sub">Hackathon Finalist · Legal-Tech Builder · Space Explorer</p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn btn-outline">View Projects</a>
+          <a href="/resume.pdf" download="ShreyanshiJangid_Resume.pdf" class="btn btn-primary">Download CV</a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-line"><div class="scroll-dot"></div></div>
+          <span class="scroll-label">SCROLL</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="section-inner">
+        <div class="about-grid">
+          <div class="about-left">
+            <span class="section-label">// ABOUT</span>
+            <h2 class="section-title">WHO AM I</h2>
+            <p style="color: var(--text-muted); font-size: 1.15rem; line-height: 1.8; margin-bottom: 2.5rem;">I'm Shreyanshi Jangid, a B.Tech CSE student at JIET Group of Institutions, Jodhpur (2024–2028). I build AI-powered tools, compete in hackathons, and turn complex problems into accessible solutions. Hackathon finalist, prompt engineer, and open-source enthusiast.</p>
+            <div class="stat-pills">
+              <span class="stat-pill">🏆 2× Finalist</span>
+              <span class="stat-pill">⚡ Prompt Engineer</span>
+              <span class="stat-pill">📍 Jodhpur, Rajasthan</span>
+            </div>
+          </div>
+          <div class="about-right">
+            <div class="glass about-card">
+              <div class="about-card-item">
+                <span class="label">🎓 Degree</span>
+                <span class="val">B.Tech – Computer Science & Engineering</span>
+              </div>
+              <div class="about-card-item">
+                <span class="label">🏛️ Institute</span>
+                <span class="val">JIET Group of Institutions, Jodhpur</span>
+              </div>
+              <div class="about-card-item">
+                <span class="label">📅 Batch</span>
+                <span class="val">2024 – 2028</span>
+              </div>
+              <div class="about-card-item">
+                <span class="label">💻 Focus</span>
+                <span class="val">AI · Legal-Tech · Prompt Engineering</span>
+              </div>
+              <div class="about-card-item">
+                <span class="label">🌐 Languages</span>
+                <span class="val">C++, C, HTML, CSS</span>
+              </div>
+              <div class="about-card-item" style="border-bottom: none; padding-bottom: 0;">
+                <span class="label">🟢 Status</span>
+                <span class="val status-badge">Open to Opportunities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="section-inner">
+        <span class="section-label" style="text-align: center;">// ARSENAL</span>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">ARSENAL</h2>
+        <div class="skills-grid">
+          <!-- Card 1 -->
+          <div class="glass skill-card">
+            <h3 class="card-heading">⌨️ LANGUAGES</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">HTML</span>
+              <span class="skill-tag">CSS</span>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="glass skill-card">
+            <h3 class="card-heading">🤖 AI / ML</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">ChatGPT</span>
+              <span class="skill-tag">Gemini</span>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="glass skill-card">
+            <h3 class="card-heading">🛠️ TOOLS</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">MS Office</span>
+              <span class="skill-tag">AutoCAD (basics)</span>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="glass skill-card">
+            <h3 class="card-heading">💡 CONCEPTS & SOFT SKILLS</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Web Development</span>
+              <span class="skill-tag">Project Management</span>
+              <span class="skill-tag">OOP</span>
+              <span class="skill-tag">Teamwork</span>
+              <span class="skill-tag">Communication</span>
+              <span class="skill-tag">Time Management</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="section-inner">
+        <span class="section-label">// MISSIONS</span>
+        <h2 class="section-title" style="margin-bottom: 4rem;">MISSIONS</h2>
+        <div class="projects-list">
+          <!-- Project 1 -->
+          <div class="glass project-card project-1">
+            <div class="project-content">
+              <div class="project-top-row">
+                <span class="project-tag tag-purple">🏆 HACKATHON FINALIST</span>
+                <span class="project-year">2026</span>
+              </div>
+              <h3 class="project-title">AI LAWYER ASSISTANT</h3>
+              <p class="project-subtitle">Legal-Tech AI Application</p>
+              
+              <ul class="project-features-list">
+                <li>› AI-powered legal assistant for simplified, accessible legal Q&A using advanced prompt engineering techniques</li>
+                <li>› Automated legal document generation — NDA, contracts — with AI-driven summarization, risk-level tagging, and case-similarity matching</li>
+                <li>› Finalist at Sabka AI: AI for Inclusion Hackathon 2026, Thapar Institute of Engineering & Technology</li>
+                <li>› Selected and presented at RECKON 7.0 Internal Hackathon, JIET Universe, Jodhpur</li>
+              </ul>
+              
+              <div class="project-stack">
+                <span class="stack-label">STACK:</span>
+                <span class="stack-item">Python</span>
+                <span class="stack-dot">·</span>
+                <span class="stack-item">LLM APIs</span>
+                <span class="stack-dot">·</span>
+                <span class="stack-item">Prompt Engineering</span>
+                <span class="stack-dot">·</span>
+                <span class="stack-item">Web Interface</span>
+              </div>
+              
+              <div class="project-badges">
+                <div class="badge">🏆 Sabka AI Finalist</div>
+                <div class="badge">🎤 RECKON 7.0 Presenter</div>
+              </div>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="glass project-card project-2">
+            <div class="project-content">
+              <div class="project-top-row">
+                <span class="project-tag tag-cyan">📋 SIH 2025 SHORTLISTED</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 class="project-title">CIVIC ENGAGEMENT APP</h3>
+              <p class="project-subtitle">Smart India Hackathon 2025</p>
+              
+              <ul class="project-features-list">
+                <li>› Co-developed a platform for reporting infrastructure issues via photo and voice with regional language support</li>
+                <li>› Designed a contractor Trust Score system for transparent, accountable civic issue resolution</li>
+                <li>› Implemented a gamified feedback loop to increase citizen participation</li>
+                <li>› Shortlisted in SIH 2025 internal round at JIET Group of Institutions</li>
+              </ul>
+              
+              <div class="project-stack">
+                <span class="stack-label">STACK:</span>
+                <span class="stack-item">Web Development</span>
+                <span class="stack-dot">·</span>
+                <span class="stack-item">AI Integration</span>
+                <span class="stack-dot">·</span>
+                <span class="stack-item">Gamification</span>
+              </div>
+              
+              <div class="project-badges">
+                <div class="badge">📋 SIH 2025 Shortlisted</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathons & Certifications -->
+    <section id="hackathons">
+      <div class="section-inner">
+        <div class="dual-grid">
+          <!-- Hackathons -->
+          <div class="battles">
+            <span class="section-label">// BATTLES</span>
+            <h2 class="section-title">BATTLES</h2>
+            <div class="timeline">
+              <div class="timeline-line"></div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>SABKA AI: AI FOR INCLUSION 2026</h4>
+                  <p>Thapar Institute of Engineering & Technology</p>
+                  <span class="badge-pill pill-cyan">🏆 Finalist</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>RECKON 7.0 INTERNAL HACKATHON</h4>
+                  <p>JIET Universe, Jodhpur</p>
+                  <span class="badge-pill pill-cyan">🏆 Finalist · Presenter</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>SMART INDIA HACKATHON 2025</h4>
+                  <p>JIET Group of Institutions</p>
+                  <span class="badge-pill pill-muted">📋 Internal Shortlist</span>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>CANHACK 2026</h4>
+                  <p>Team: Tech Stellars</p>
+                  <span class="badge-pill pill-grey">Participant</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Certifications -->
+          <div class="clearances">
+            <span class="section-label">// CLEARANCES</span>
+            <h2 class="section-title">CLEARANCES</h2>
+            <div class="cert-stack">
+              <div class="glass cert-pill">
+                <div class="cert-icon">⚡</div>
+                <div class="cert-info">
+                  <h4>Prompt Engineering</h4>
+                  <p>Infosys Springboard · 2024</p>
+                </div>
+              </div>
+              <div class="glass cert-pill">
+                <div class="cert-icon">📊</div>
+                <div class="cert-info">
+                  <h4>Employment Communication (75%)</h4>
+                  <p>NPTEL / IIT Kharagpur · 2025</p>
+                </div>
+              </div>
+              <div class="glass cert-pill">
+                <div class="cert-icon">📋</div>
+                <div class="cert-info">
+                  <h4>Project Management: Planning, Execution & Control</h4>
+                  <p>NPTEL · 2024</p>
+                </div>
+              </div>
+              <div class="glass cert-pill">
+                <div class="cert-icon">🤖</div>
+                <div class="cert-info">
+                  <h4>AI Tools & ChatGPT Workshop</h4>
+                  <p>Be10x · 2025</p>
+                </div>
+              </div>
+              <div class="glass cert-pill">
+                <div class="cert-icon">💻</div>
+                <div class="cert-info">
+                  <h4>OOP with C++ (Summer Training)</h4>
+                  <p>JIET · 2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Adventures Section -->
+    <section id="adventures">
+      <div class="section-inner">
+        <span class="section-label" style="text-align: center;">// ADVENTURES</span>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 4rem;">ADVENTURES</h2>
+        
+        <div class="adventures-activities">
+          <div class="glass activity-card">
+            <h3>🏃 HACKATHON COMPETITOR</h3>
+            <p>Active hackathon competitor with experience in rapid prototyping, team collaboration, and delivering under pressure.</p>
+          </div>
+          <div class="glass activity-card">
+            <h3>🤝 TEAM COLLABORATOR</h3>
+            <p>Experienced in cross-functional team environments, communicating ideas clearly and managing timelines efficiently.</p>
+          </div>
+          <div class="glass activity-card">
+            <h3>🔧 RAPID PROTOTYPER</h3>
+            <p>Skilled at turning ideas into working demos fast — from concept to presentation-ready in tight hackathon windows.</p>
+          </div>
+        </div>
+
+        <div class="adventures-interests">
+          <div class="interests-label">SIGNAL FREQUENCIES</div>
+          <div class="interest-tags">
+            <span class="interest-tag">Artificial Intelligence</span>
+            <span class="interest-tag">Legal-Tech</span>
+            <span class="interest-tag">Prompt Engineering</span>
+            <span class="interest-tag">Machine Learning</span>
+            <span class="interest-tag">Open-Source</span>
+            <span class="interest-tag">Web Development</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="section-inner contact-content">
+        <span class="section-label" style="text-align: center;">// CONTACT</span>
+        <h2 class="contact-title">INITIATE CONTACT</h2>
+        <p class="hero-sub" style="margin-bottom: 4rem;">Open to collaborations, hackathons, and interesting problems.</p>
+        
+        <div class="contact-links">
+          <a href="mailto:jangidshreyanshi@email.com" class="contact-pill">
+            <i class="ti ti-mail"></i> jangidshreyanshi@email.com
+          </a>
+          <a href="https://linkedin.com/in/shreyanshi-jangid" target="_blank" class="contact-pill">
+            <i class="ti ti-brand-linkedin"></i> linkedin.com/in/shreyanshi-jangid
+          </a>
+          <a href="tel:+919509158422" class="contact-pill">
+            <i class="ti ti-phone"></i> +91-9509158422
+          </a>
+        </div>
+        
+        <a href="/resume.pdf" download="ShreyanshiJangid_Resume.pdf" class="btn btn-primary" style="margin-top: 2rem;">
+          <i class="ti ti-download"></i> Download Resume
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Shreyanshi Jangid · Built with gravity-defying code</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
