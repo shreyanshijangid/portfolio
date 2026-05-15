@@ -63,7 +63,12 @@ tmp/
 temp/
 *.tmp
 *.temp
-frames/
+
+# ===========================
+# Root-level files not needed on GitHub
+# ===========================
+gsap-animation.html
+package-lock.json
 
 # ===========================
 # Package lock (optional - keep if you want reproducible installs)
